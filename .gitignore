@@ -2,3 +2,4 @@
 cpanfile.snapshot
 InfluxDB-Writer-*
 local
+tmp
