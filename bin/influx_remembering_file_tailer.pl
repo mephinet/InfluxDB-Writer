@@ -10,7 +10,8 @@ use Moose;
 extends 'InfluxDB::Writer::RememberingFileTailer';
 with 'MooseX::Getopt';
 
-use Log::Any::Adapter ('Stderr');
+use Log::Any::Adapter ( 'Stderr',
+    log_level => $ENV{DEBUG} ? 'trace' : 'warning' );
 
 my $runner = Runner->new_with_options->run;
 
